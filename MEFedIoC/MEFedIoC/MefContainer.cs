@@ -4,19 +4,11 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
-using System.Reflection;
 
 namespace MEFedIoC
 {
     public class MefContainer : CompositionContainer, IMefContainer
     {
-        //public MefContainer()
-        //    : this(new AggregateCatalog(new AssemblyCatalog(Assembly.GetEntryAssembly()),
-        //                                new AssemblyCatalog(Assembly.GetExecutingAssembly()),
-        //                                new AssemblyCatalog(Assembly.GetCallingAssembly())))
-        //{
-        //}
-
         public MefContainer(ComposablePartCatalog catalog)
             : base(catalog)
         {
@@ -68,6 +60,11 @@ namespace MEFedIoC
         public void BuildUp(object instance)
         {
             this.SatisfyImportsOnce(instance);
+        }
+
+        public void Compose(params object[] attrParts)
+        {
+            this.ComposeParts(attrParts);
         }
 
         #endregion

@@ -13,6 +13,7 @@ namespace MEFedIoC.Tests
             var catalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
             multiCatalog.Catalogs.Add(catalog);
             var container = new CompositionContainer(multiCatalog);
+            container.Compose();
             return container;
         }
 

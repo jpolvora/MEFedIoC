@@ -66,5 +66,10 @@ namespace MEFedIoC
             container.RegisterFunc(() => new T2());
             container.RegisterFunc<T>(() => container.Resolve<T2>());
         }
+
+        public static void Compose(this CompositionContainer container, params object[] attrParts)
+        {
+            container.ComposeParts(attrParts);
+        }
     }
 }
