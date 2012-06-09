@@ -49,7 +49,7 @@ For this demo, I'll reference these two types for testing: IFoo interface and Fo
         }
     }
 
-We can register base types using factories as Lambda Expressions:
+We can register base types using factories as Lambda Expressions. Ideal if you want transient instances with custom constructors.
 
 	using MEFedIoC;
 
@@ -63,7 +63,7 @@ We can register base types using factories as Lambda Expressions:
 		Assert.IsInstanceOfType(foo, typeof(Foo));
 	}
 	
-We can register base types with existing instances:
+We can register base types with existing instances. Ideal if you want MEF returns always the same singleton instance.
 
 	[TestMethod]
 	public void TestRegisterInstance()
