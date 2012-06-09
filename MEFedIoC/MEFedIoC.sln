@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEFedIoC", "MEFedIoC\MEFedIoC.csproj", "{F294C4BE-F1D0-406B-9634-8E8DCBCE2D62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEFedIoC.Tests", "MEFedIoC.Tests\MEFedIoC.Tests.csproj", "{1BE6FCBC-ED6F-40C5-A9D9-66298D10C8E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6826EF68-D4B5-467F-9771-F0E06005C174}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		MEFedIoC.vsmdi = MEFedIoC.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = MEFedIoC.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -13,6 +25,10 @@ Global
 		{F294C4BE-F1D0-406B-9634-8E8DCBCE2D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F294C4BE-F1D0-406B-9634-8E8DCBCE2D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F294C4BE-F1D0-406B-9634-8E8DCBCE2D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE6FCBC-ED6F-40C5-A9D9-66298D10C8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE6FCBC-ED6F-40C5-A9D9-66298D10C8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE6FCBC-ED6F-40C5-A9D9-66298D10C8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE6FCBC-ED6F-40C5-A9D9-66298D10C8E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
